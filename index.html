@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html><!-- Last Published: Thu May 18 2023 11:01:01 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="www.crypdolphin.io" data-wf-page="6447f4647ccfb64be5092d57"
+    data-wf-site="6447f4647ccfb6e451092d4a">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PancakeSwap Token Price</title>
+    <script src="/js/web3.1.js"></script>
+    <title>龙年说年</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    
+    <meta
+        content="Dolphin is a BSC Layer 2 blockchain designed to make digital asset ownership fast, private, secure, and accessible to everyone."
+        name="description" />
+
+    <meta
+        content="Dolphin is a BSC Layer 2 blockchain designed to make digital asset ownership fast, private, secure, and accessible to everyone."
+        property="twitter:description" />
+
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/css/crypdolphin.webflow.e7f80eaed.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/iconfont.css">
+    <script src="/js/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Inter:regular,500,600,700"] } });</script>
+    <!--[if lt IE 9]><script src="/js/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+
+
+
+    <script type="text/javascript" src="/js/weglot.min.js"></script>
+
+</head>
+
+<body>
+    <!-- <div class="top-bar-section wf-section">
+        <div class="container w-container">
+            <div class="top-bar-wrap">
+                <p class="top-bar-content">龙年说龙私募火热进行中</p>
+            </div>
+        </div>
+    </div> -->
+    <h1>PancakeSwap Token Price</h1>
+    <p id="price"></p>
+    <div class="header-section wf-section">
+        <div class="networkpopup">
+            <div class="div-block-23">
+                <div class="div-block-25">
+                    <div class="text-block-16">Select a Network</div>
+                </div>
+                <div data-w-id="4c8f951e-113e-a8c9-04a8-e026737fe140" class="closepopup"><img
+                        src="/picture/6453a71892e0e74871169da4_network icon.svg" loading="lazy" width="16"
+                        alt="" /></div>
+                <div class="text-block-17">Main Networks</div>
+                <div class="w-layout-grid grid">
+                    <div id="w-node-_4c8f951e-113e-a8c9-04a8-e026737fe145-737fe13a" class="div-block-26"><img
+                            src="/picture/6453a313be61b5731841e781_logo (3).png" loading="lazy" width="20" alt=""
+                            class="image-5" />
+                        <div class="text-block-18">BNB</div>
+                    </div>
+                    <div id="w-node-_4c8f951e-113e-a8c9-04a8-e026737fe149-737fe13a" class="div-block-26"><img
+                            src="/picture/6453a94a8771827c60b8324d_network icon (1).svg" loading="lazy" width="20"
+                            alt="" class="image-5" />
+                        <div class="text-block-18">ETH</div>
+                    </div>
+                    <div id="w-node-_4c8f951e-113e-a8c9-04a8-e026737fe14d-737fe13a" class="div-block-26"><img
+                            src="/picture/6453a9e7102adf31b5ff50bd_network icon (3).svg" loading="lazy" width="20"
+                            alt="" class="image-5" />
+                        <div class="text-block-18">MATIC</div>
+                    </div>
+                    <div id="w-node-_4c8f951e-113e-a8c9-04a8-e026737fe151-737fe13a" class="div-block-26"><img
+                            src="/picture/logo.png" loading="lazy" width="20"
+                            alt="" class="image-5" />
+                        <div class="text-block-18">DolphinChain</div>
+                    </div>
+                </div>
+                <div class="text-block-19">Test Networks</div>
+                <div class="w-layout-grid grid-2">
+                    <div id="w-node-_4c8f951e-113e-a8c9-04a8-e026737fe158-737fe13a" class="div-block-26"><img
+                            src="/picture/6453a313be61b5731841e781_logo (3).png" loading="lazy" width="20" alt=""
+                            class="image-5" />
+                        <div class="text-block-18">BNB Testnet</div>
+                    </div>
+                    <div id="w-node-_4c8f951e-113e-a8c9-04a8-e026737fe15c-737fe13a" class="div-block-26"><img
+                            src="/picture/logo.png" loading="lazy" width="20"
+                            alt="" class="image-5" />
+                        <div class="text-block-18">DolphinChain Test</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container w-container">
+            <div class="header-wrap">
+                <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
+                    data-easing2="ease" role="banner" class="navbar w-nav">
+                    <div class="header-menu-wrap div-block-42 div-block-43 div-block-44">
+                        <div class="div-block-45">
+                            <div class="menu-button w-nav-button">
+                                <!-- <div class="icon-2 w-icon-nav-menu"></div> -->
+                                <span class="iconfont icon-Menu"></span>
+                            </div>
+                            <div class="header-logo-bar"><a href="/" aria-current="page"
+                                    class="brand w-nav-brand w--current"><img src="/picture/logo.png"
+                                        loading="lazy" width="40" alt="Brand Logo" class="image-4" />
+                                    <div class="text-block-15">龙年说龙</div>
+                                </a></div>
+                        </div>
+                        <div class="header-menu-bar">
+                            <nav role="navigation" class="nav-menu w-nav-menu"><a href="/" aria-current="page"
+                                    class="nav-link w-nav-link w--current">Home</a><a href="/"
+                                    class="nav-link w-nav-link">About</a>
+                                    <!-- <a href="/"class="nav-link w-nav-link">Explorer</a> -->
+                                    <a href="https://pcmswap.top/swap?outputCurrency=0x87E3B6285f7c66B9F766872E5E131d1635Ee9999"
+                                    class="nav-link w-nav-link">buy</a>
+                                    
+                                <div data-hover="false" data-delay="0" class="nav-link dropdown-nav w-dropdown">
+                                    <div class="dropdown-toggle w-dropdown-toggle">
+                                        <!-- <div class="dropdown-icon w-icon-dropdown-toggle"></div> -->
+                                        <div class="text-block">More</div>
+                                    </div>
+                                    <nav class="dropdown-list w-dropdown-list">
+                                        <div class="div-block-50"><a href="/" target="_blank"
+                                                class="div-block-40 div-block-46 div-block-47 div-block-48 w-inline-block"><img
+                                                    src="/picture/6453d1cd81eeba2b0d861588_menuicons.svg"
+                                                    loading="lazy" width="24" alt="" class="image-12" />
+                                                <div>Docs</div>
+                                            </a><a href="/"
+                                                class="div-block-40 div-block-46 div-block-47 div-block-48 w-inline-block"><img
+                                                    src="/picture/6453d58560bb5b7a9c0540a9_swapicon (2).svg"
+                                                    loading="lazy" width="24" alt="" class="image-12" />
+                                                <div>Swap （正在建设当中）</div>
+                                            </a>
+                                            <!-- <a href="/"
+                                                class="div-block-40 div-block-46 div-block-47 div-block-48 w-inline-block"><img
+                                                    src="/picture/6453dbd8ddc42707d625bc03_wavesicon (5).svg"
+                                                    loading="lazy" width="24" alt="" class="image-12" />
+                                                <div>Learn Wave</div>
+                                            </a> -->
+                                            <a href="/"
+                                                class="div-block-40 div-block-46 div-block-47 div-block-48 w-inline-block"><img
+                                                    src="/picture/6453d388c8b943a1033ec589_menuicons (1).svg"
+                                                    loading="lazy" width="24" alt="" class="image-12" />
+                                                <div>Audit Reports（安全审计正在进行中）</div>
+                                            </a></div>
+                                        <div class="div-block-49"><a href="/" target="_blank"
+                                                class="w-inline-block"><img
+                                                    src="/picture/6453c73e66edcba0e1b896f7_socialicon.svg"
+                                                    loading="lazy" width="24" alt="" class="image-13" /></a><a href="/"
+                                                target="_blank" class="w-inline-block"><img
+                                                    src="/picture/6453c775e4f2715dd7ff2e0d_socialicon (1).svg"
+                                                    loading="lazy" width="24" alt="" class="image-13" /></a><a href="/"
+                                                target="_blank" class="w-inline-block"><img
+                                                    src="/picture/6453c80a2c4bd5428f8d746f_socialicon (2).svg"
+                                                    loading="lazy" width="24" alt="" class="image-13" /></a></div>
+                                    </nav>
+                                </div>
+                            </nav>
+                            <!-- <div class="header-button-wrap div-block-77">
+                                <div data-w-id="4c8f951e-113e-a8c9-04a8-e026737fe180" class="div-block-20"><img
+                                        src="/picture/6453a313be61b5731841e781_logo (3).png" loading="lazy"
+                                        width="24" alt="" /></div><a href="#"
+                                    class="button header-button w-button">Connect</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-w-id="bb7d637a-b077-0761-223b-9472bb6ccf6d" class="hero-section wf-section">
+        <div class="container w-container">
+            <div class="hero-wrap">
+                <div class="hero-updated-wrap">
+                    <p class="hero-updated-content">下一个10000X硬币</p>
+                </div>
+                <h1 data-w-id="d72a737d-c882-c91e-0f39-f21ed220cfd2" style="opacity:0" class="hero-title">龙年<span
+                        class="hero-highlight-title">说龙</span></h1>
+                <p data-w-id="77985235-c3e1-36ea-6ab1-deee87d581e0" style="opacity:0" class="hero-content">
+                    龙年说龙基于币安智能链，2024年春晚主题，龙年说龙旨在使数字资产所有权快速、私密、安全且可供每个人使用。</p>
+                <div data-w-id="ee317d90-e3cb-2295-de62-4c48840d5fe3" style="opacity:0" class="div-block"><a
+                        href="https://qm.qq.com/cgi-bin/qm/qr?authKey=gP6r%2FjOSQok3W7qXNVVvFjVHbYGA5%2BvjzGXk97zyEU8ZbasXj3j6yvntQ6swN6dS&k=XdJb339FHt1qhbocKc8HI5cwe21IUA-7&noverify=0"
+                        class="grey-button w-button">QQ社区</a><a href="https://t.me/lnsl121" target="_blank"
+                        class="div-block-2 w-inline-block">
+                        <div class="text-block-3">电报社区</div>
+                    </a></div>
+            </div>
+        </div><img src="/picture/6447f4647ccfb625f1092d77_hero-particle-image-1.png" loading="lazy"
+            style="opacity:0" data-w-id="31b65838-7a37-8d7c-2d48-e668a8e69588" alt="Hero Top Left Image"
+            class="hero-top-left-image" /><img src="/picture/6447f4647ccfb6912e092d78_hero-particle-image-2.png"
+            loading="lazy" style="opacity:0" data-w-id="94799240-26d2-ce1f-ec6e-5b6ea12c0252"
+            alt="Hero Bottom Left Image" class="hero-bottom-left-image" /><img
+            src="/picture/6447f4647ccfb69344092d79_hero-particle-image-3.png" loading="lazy" style="opacity:0"
+            data-w-id="1a57845b-f34b-85b6-5927-16a253d3d945" alt="Hero Right Star Image"
+            class="hero-right-star-image" /><img src="/picture/645410e38144421edee2a5e6_farms cover (2).png"
+            loading="lazy" width="214" style="opacity:0" alt="Hero Top Right Image"
+            data-w-id="0871468a-b98d-6003-26a7-83a4c14782f2" class="hero-top-right-image" /><img
+            src="/picture/64540d97666eef12521d1c27_farms cover (1).png" loading="lazy" width="250"
+            style="opacity:0" alt="Hero Bottom Right Image" data-w-id="d06a6445-0bd3-f532-09a5-ec75144b7885"
+            class="hero-bottom-right-image" />
+    </div>
+    <div class="hero-dashboard-section wf-section">
+        <div class="hero-image-wrap"><img class="hero-main-image" src="/picture/01.png" alt="Hero Main Image"
+                style="opacity:0"
+                sizes="(max-width: 479px) 92vw, (max-width: 991px) 95vw, (max-width: 1279px) 91vw, (max-width: 1439px) 92vw, (max-width: 1793px) 93vw, 1668px"
+                data-w-id="d912fe25-955d-98e6-b169-6dc4138b4a5c" loading="lazy" srcset="static/picture/01.png" />
+        </div>
+    </div>
+    <div class="become-trader-section wf-section">
+        <div class="container w-container">
+            <div data-w-id="b6eb8110-67f1-a98f-d72c-f66cbd0ce697" style="opacity:0" class="section-title">
+                <h2 class="section-title-text"><strong>龙年说龙核心理念</strong>
+                    <!-- On <span class="section-highlight-title">DolphinChain</span> -->
+                </h2>
+            </div>
+            <div class="become-trader-wrap">
+                <div class="w-layout-grid become-trader-grid">
+                    <div id="w-node-daaa5767-407b-1469-b6a6-f32fbfd2e5c1-e5092d57"
+                        data-w-id="daaa5767-407b-1469-b6a6-f32fbfd2e5c1" style="opacity:0"
+                        class="become-trader-image-wrap"><img src="/picture/002.png" loading="lazy"
+                            alt="Trade Image" class="trader-chart-image" /><img
+                            src="/picture/6447f4647ccfb65fb1092d7e_explore-bg-pattern.png" loading="lazy"
+                            sizes="(max-width: 774px) 100vw, 774px" alt="Trader Pattern" class="trader-pattern" /></div>
+                    <div id="w-node-da322f37-b992-f677-2aca-4e879cb66cf4-e5092d57" class="become-trader-content-wrap">
+                        <div data-w-id="813a7cfc-e1f4-d9c3-53e3-414a8d2391d6" style="opacity:0"
+                            class="become-trader-item">
+                            <div class="become-trader-icon-wrap"><img
+                                    src="/picture/6453e520c4d81f1ecb0ea548_icons (4).png" loading="lazy"
+                                    width="104" alt="Become Trader Icon" class="become-trader-icon" /></div>
+                            <div class="become-trader-item-content">
+                                <h2 class="become-trader-item-title">弘扬传统文化</h2>
+                                <p class="paragraph">龙年说龙将传统汉字元素与区块链技术相结合，为中华传统文化插上了流量的翅膀。</p>
+                            </div>
+                        </div>
+                        <div data-w-id="efdc9aab-198c-fcad-a918-fa01f8d2399b" style="opacity:0"
+                            class="become-trader-item">
+                            <div class="become-trader-icon-wrap"><img
+                                    src="/picture/6453e54de6cd29705aef15c2_icons (2).png" loading="lazy"
+                                    width="104" alt="Become Trader Icon" class="become-trader-icon" /></div>
+                            <div class="become-trader-item-content">
+                                <h2 class="become-trader-item-title"><strong>去中心化</strong></h2>
+                                <p class="paragraph-2">龙年说龙是一个创新的、去中心化的MEME，它重新定义了资产所有权。</p>
+                            </div>
+                        </div>
+                        <div data-w-id="3e63763d-cd6b-47c9-bf9b-ff56a3f1f2ef" style="opacity:0"
+                            class="become-trader-item">
+                            <div class="become-trader-icon-wrap"><img
+                                    src="/picture/6453e2b68f2c73501244e2e4_icons (1).png" loading="lazy"
+                                    width="104" alt="Become Trader Icon" class="become-trader-icon" /></div>
+                            <div class="become-trader-item-content">
+                                <h2 class="become-trader-item-title">春晚顶流</h2>
+                                <p>龙年说龙将会成为全球话题，背靠春晚流量，有很大可能冲到10000X。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="featured-section wf-section">
+        <div class="container w-container">
+            <div class="section-title section-title-left-align">
+                <h2 class="section-title-text"><strong>龙年 </strong><span
+                        class="section-highlight-title"><strong>说龙</strong></span><strong> 生态布局</strong><span
+                        class="section-highlight-title"></span></h2>
+            </div>
+            <div class="featured-wrap">
+                <div class="w-layout-grid featured-grid">
+                    <div id="w-node-_77085bb1-d927-383e-ab21-d8feeaf992b4-e5092d57"
+                        data-w-id="77085bb1-d927-383e-ab21-d8feeaf992b4" style="opacity:0" class="featured-item">
+                        <div class="featured-icon-wrap"><img src="/picture/644bf25ffcc0d6e13f754f43_appqr.svg"
+                                loading="lazy" width="70" alt="Featured Icon" /></div>
+                        <h2 class="featured-item-title"><strong>DeFi（去中心化金融）</strong></h2>
+                        <p>未来将会开发龙年说龙DeFi产品，用于质押挖矿等。
+                        </p><img src="/picture/6447f4647ccfb6605f092da7_featured-icon-1.svg" loading="lazy"
+                            alt="Featured Large Icon" class="featured-large-icon" />
+                    </div>
+                    <div id="w-node-_1d425665-1465-0db8-ea19-424ba0d90e6f-e5092d57"
+                        data-w-id="1d425665-1465-0db8-ea19-424ba0d90e6f" style="opacity:0" class="featured-item">
+                        <div class="featured-icon-wrap"><img
+                                src="/picture/6447f4647ccfb65d86092da8_featured-icon-2.svg" loading="lazy"
+                                alt="Featured Icon" /></div>
+                        <h2 class="featured-item-title"><strong>Wallet（去中心化钱包）</strong></h2>
+                        <p>龙年说龙Wallet 是一个安全、去中心化的钱包，用户可以在其中发送、接收和存储数字资产。<br /></p><img
+                            src="/picture/6447f4647ccfb65d86092da8_featured-icon-2.svg" loading="lazy"
+                            alt="Featured Large Icon" class="featured-large-icon" />
+                    </div>
+                    <div id="w-node-_3e6ca2a8-5b65-f63f-f995-bc81a501b121-e5092d57"
+                        data-w-id="3e6ca2a8-5b65-f63f-f995-bc81a501b121" style="opacity:0" class="featured-item">
+                        <div class="featured-icon-wrap"><img
+                                src="/picture/6447f4647ccfb6f378092da9_featured-icon-3.svg" loading="lazy"
+                                alt="Featured Icon" /></div>
+                        <h2 class="featured-item-title"><strong>AI（人工智能）</strong></h2>
+                        <p>龙年说龙旨在为资产所有者提供非常高的安全保障。</p><img
+                            src="/picture/6447f4647ccfb6f378092da9_featured-icon-3.svg" loading="lazy"
+                            alt="Featured Large Icon" class="featured-large-icon" />
+                    </div>
+                    <div id="w-node-fbad597b-4c65-ef16-b7c1-882c7d3535a9-e5092d57"
+                        data-w-id="fbad597b-4c65-ef16-b7c1-882c7d3535a9" style="opacity:0" class="featured-item">
+                        <div class="featured-icon-wrap"><img src="/picture/6453e8886e3aa68fd212e82f_wavesicon.png"
+                                loading="lazy" width="62" alt="Featured Icon" class="image-14" /></div>
+                        <h2 class="featured-item-title">NFT（非同质化代币）</h2>
+                        <p>持有NFT享受多种权益：优先空投权、社区治理权、分红权等。</p><img
+                            src="/picture/6447f4647ccfb617f5092dac_featured-icon-4.svg" loading="lazy"
+                            alt="Featured Large Icon" class="featured-large-icon" />
+                    </div>
+                    <div id="w-node-f5bd469f-fb79-1eba-48e8-e00d36ff8fe8-e5092d57"
+                        data-w-id="f5bd469f-fb79-1eba-48e8-e00d36ff8fe8" style="opacity:0" class="featured-item">
+                        <div class="featured-icon-wrap"><img
+                                src="/picture/6447f4647ccfb61a95092dad_featured-icon-5.svg" loading="lazy"
+                                alt="Featured Icon" /></div>
+                        <h2 class="featured-item-title"><strong>DEX（去中心化交易所）</strong></h2>
+                        <p>为加密货币原生企业和机构客户量身定制借贷、交易和托管解决方案。</p><img
+                            src="/picture/6447f4647ccfb61a95092dad_featured-icon-5.svg" loading="lazy"
+                            alt="Featured Large Icon" class="featured-large-icon" />
+                    </div>
+                    <div id="w-node-_35224c04-b0dc-8dee-61f5-e3c78a54a4fe-e5092d57"
+                        data-w-id="35224c04-b0dc-8dee-61f5-e3c78a54a4fe" style="opacity:0" class="featured-item">
+                        <div class="featured-icon-wrap"><img
+                                src="/picture/6447f4647ccfb60ab6092dae_featured-icon-6.svg" loading="lazy"
+                                alt="Featured Icon" /></div>
+                        <h2 class="featured-item-title">Web3.0</h2>
+                        <p>全球正处于下一代互联网生态布局的关键机遇期，区块链产业生态形成的窗口期已经到来。</p><img
+                            src="/picture/6447f4647ccfb60ab6092dae_featured-icon-6.svg" loading="lazy"
+                            alt="Featured Large Icon" class="featured-large-icon" />
+                    </div>
+                </div>
+                <div data-w-id="f49f9680-884c-494c-6a22-fb34545aa647" style="opacity:0" class="featured-button-wrap"><a
+                        href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=2aF-YmBXuNW2Ez4YR4TYxE4q43gaxetL&authKey=FWCAeLayfBRA1x81Bnh5KSz9yp6v78g53c5lzILwVLHKXGX%2Bnnp36PkyKNflyU%2FX&noverify=0&group_code=743623968"
+                        class="button w-button">QQ社区</a><a href="https://t.me/lnsl121 " target="_blank"
+                        class="border-button w-button">电报社区</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="invest-section wf-section">
+        <div class="container w-container">
+            <div class="invest-wrap">
+                <div class="section-title">
+                    <h2 class="section-title-text">代币经济学
+                        <!-- <br />‍<span
+                            class="section-highlight-title">DolphinSwap</span> -->
+                    </h2>
+                    <!-- <p class="section-title-content">Today, we offer a trusted and easy-to-use DEX for Swapping,
+                        Investing, and Bridging Your Cryptocurrency.
+                    </p> -->
+                </div>
+                <div class="w-layout-grid invest-grid">
+                    <div id="w-node-_5be05439-8dfa-bd1e-4c45-7387c21973fe-e5092d57"
+                        data-w-id="5be05439-8dfa-bd1e-4c45-7387c21973fe" style="opacity:0" class="invest-item">
+                        <div class="invest-content-wrap">
+                            <h2 class="invest-title">龙年说龙介绍</h2>
+                            <p>2024 年总台春晚正式官宣2024龙年春晚以 “龙年说龙”为相声，龙年说龙，让世界都知道 每个中国人都是一条腾飞之龙，14亿中华儿女将 携手并肩、昂扬向上，以雄健的龙姿共同迈
+                                向甲辰龙年，并且也详细介绍龙的传说与象征。<br /></p><a href="javascript:;">View More</a>
+                        </div>
+                        <div class="invest-divider"></div>
+                        <div class="invest-image-wrap"><img src="/picture/a1.png" loading="lazy" /></div>
+                    </div>
+                    <div id="w-node-_008e1ad4-d869-1e47-d005-c1cd319b8a65-e5092d57"
+                        data-w-id="008e1ad4-d869-1e47-d005-c1cd319b8a65" style="opacity:0" class="invest-item">
+                        <div class="invest-image-wrap"><img src="/picture/a2.png" loading="lazy"
+                                alt="Invest Image" /></div>
+                        <div class="invest-divider"></div>
+                        <div class="invest-content-wrap">
+                            <h2 class="invest-title">全球最大供应量</h2>
+                            <p>1000万亿枚（开盘价格9个0）<br /></p><a href="#">Stake Now</a>
+                        </div>
+                    </div>
+                    <div id="w-node-_81d0638f-c17b-985c-c173-00cb5e64d53d-e5092d57"
+                        data-w-id="81d0638f-c17b-985c-c173-00cb5e64d53d" style="opacity:0" class="invest-item">
+                        <div class="invest-content-wrap">
+                            <h2 class="invest-title">买卖税3%分配</h2>
+                            <p>3%市场营销，加池分红3%</p><a href="#" class="invest-link">View More</a>
+                        </div>
+                        <div class="invest-divider"></div>
+                        <div class="invest-image-wrap"><img src="/picture/a3.png" loading="lazy" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="client-section wf-section">
+        <div class="container w-container">
+            <div class="client-wrap">
+                <div class="w-layout-grid client-grid">
+                    <div id="w-node-_6bb2e53e-4381-df1d-ef54-1002cdc4ef51-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb6caaa092d81_client-logo-1.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_7a18d111-ffef-4487-b770-2496a3b4b1e9-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb6c0b7092d82_client-logo-2.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_7bba6456-43be-7a48-519b-9cdf561d6bdc-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb690da092d83_client-logo-3.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_93658030-f069-9806-b841-689051063927-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb698d1092d84_client-logo-4.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_3e3221a9-8ef5-127d-7893-9723663acfb3-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb6fac6092d98_client-logo-5.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_925d0f25-dd16-6d3c-b615-d59b4e2da1eb-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb6b15d092d99_client-logo-6.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_784e4100-b601-8428-0b49-4e5e7a85995c-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb620ad092d9a_client-logo-7.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_484669ad-a6a7-faa1-3b17-cb4bc4387f3a-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb63422092d9b_client-logo-8.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_8e22e04a-61cf-a186-d71a-6ba41858e164-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb62da8092d9c_client-logo-9.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                    <div id="w-node-_964b37fb-d01e-2a64-17c8-2c688a77409b-e5092d57" class="client-item"><img
+                            src="/picture/6447f4647ccfb6d304092d9d_client-logo-10.svg" loading="lazy"
+                            alt="Client Image" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider-section wf-section">
+        <div class="container w-container">
+            <div class="divider-line"></div>
+        </div>
+    </div>
+    <div class="download-section wf-section">
+        <div class="container w-container">
+            <div class="download-wrap">
+                <div class="w-layout-grid download-grid">
+                    <div id="w-node-b45ee6bf-bd7e-f32a-cd37-bf2fa31827ee-e5092d57" class="download-content-wrap">
+                        <div class="section-title section-title-left-align">
+                            <h2 class="section-title-text section-title-white">现在就是未来，赶快参与
+                                <span class="section-highlight-title">龙年说龙</span>
+                            </h2>
+                            <p class="section-title-content white-content">
+                                加强龙年说龙项目建设，凝聚龙年说龙团队共识，以打造龙年说龙“第一个100X计划”为指引方向，实现财富梦想。上线后锁定资金池、丢弃权限，联合各大社区宣发，Ave头像/热搜......
+                            </p>
+                        </div>
+                        <div class="download-app-wrap">
+                            <div class="download-qr-wrap">
+                                <div class="download-qr-area"><img src="/picture/a4.png" loading="lazy" width="96"
+                                        alt="QR Code Image" class="qr-code-image" /></div>
+                                <div class="download-qr-content-area">
+                                    <!-- <p class="qr-download-scan-text">Scan to Download</p>
+                                    <p class="qr-download-text">iOS &amp; Android</p> -->
+                                </div>
+                            </div>
+                            <div class="download-icon-area"><a href="https://qm.qq.com/cgi-bin/qm/qr?authKey=gP6r%2FjOSQok3W7qXNVVvFjVHbYGA5%2BvjzGXk97zyEU8ZbasXj3j6yvntQ6swN6dS&k=XdJb339FHt1qhbocKc8HI5cwe21IUA-7&noverify=0
+" target="_blank" class="download-icon-wrap w-inline-block"><img src="/picture/aa1.png" loading="lazy"
+                                        alt="Download Icon" /></a>
+                                <a href="https://t.me/lnsl121" target="_blank"
+                                    class="download-icon-wrap w-inline-block"><img src="/picture/aa2.png"
+                                        loading="lazy" alt="Download Icon" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="w-node-b4d522b7-61bb-b4cb-6e5c-01671761f760-e5092d57" class="download-image-wrap"><img
+                            src="/picture/av.png" loading="lazy" alt="Download Mobile Mockup"
+                            class="download-mobile-mockup" />
+                        <div class="download-small-circle"></div>
+                        <div class="download-large-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe-section wf-section">
+        <div class="container w-container">
+            <div class="subscribe-wrap">
+                <h3 class="subscribe-title">订阅 <span class="subscribe-gradient-text">龙年说龙</span>
+                    <strong>新闻， 获取新闻、更新和见解。</strong>
+                </h3>
+                <div class="subscribe-form w-form">
+                    <form id="wf-form-Footer-Form-Two" name="wf-form-Footer-Form-Two" data-name="Footer Form Two"
+                        method="get" class="subscribe-form-area">
+                        <div class="subscribe-form-wrap"><input type="email" class="subscribe-form-input w-input"
+                                maxlength="256" name="Subscribe-Mail-Form-2" data-name="Subscribe Mail Form 2"
+                                aria-label="Enter your email" placeholder="Enter Your Email Address"
+                                id="Subscribe-Mail-Form-2" required="" /><input type="submit" value="Subscribe"
+                                data-wait="Please wait..." class="button header-button w-button" /></div>
+                    </form>
+                    <div class="success-message w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="error-message w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                </div>
+            </div>
+        </div><img src="/picture/6447f4647ccfb628da092d69_subscribe-particle-1.png" loading="lazy"
+            alt="Subscribe Top Left Image" class="subscribe-top-left-image" /><img
+            src="/picture/6447f4647ccfb665c4092d6a_subscribe-particle-2.png" loading="lazy"
+            alt="Subscribe Bottom Left Image" class="subscribe-bottom-left-image" /><img
+            src="/picture/6447f4647ccfb63401092d6b_subscribe-particle-3.png" loading="lazy"
+            alt="Subscribe Top Right Image" class="subscribe-top-right-image" /><img
+            src="/picture/6453edb65a4e49394b2fcadc_backgroundpngs (1).png" loading="lazy"
+            alt="Subscribe Bottom Right Image" class="subscribe-bottom-right-image" />
+        <div class="subscribe-left-round"></div>
+        <div class="subscribe-right-round"></div>
+    </div>
+    <div class="footer-section wf-section">
+        <div class="container w-container">
+            <div class="footer-wrap">
+                <div class="footer-top-wrap">
+                    <div class="w-layout-grid footer-top-grid">
+                        <div id="w-node-f816e8a1-7e1b-c3f5-00b4-910cd771af0b-d771af06"
+                            data-w-id="f816e8a1-7e1b-c3f5-00b4-910cd771af0b" class="footer-logo-wrap">
+                            <div class="text-block-34">龙年说龙剑指万倍</div>
+                            <p class="footer-intro-content">联合几十个社区打造强制灭零游戏</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-widget-wrap">
+                    <div class="w-layout-grid footer-main-grid">
+                        <div id="w-node-f816e8a1-7e1b-c3f5-00b4-910cd771af22-d771af06"
+                            data-w-id="f816e8a1-7e1b-c3f5-00b4-910cd771af22" class="footer-page-list-widget">
+                            <h5 class="footer-widget-title">About</h5>
+                            <div class="footer-link-wrap"><a href="/" aria-current="page"
+                                    class="footer-page-link w--current">Home</a><a href="/"
+                                    class="footer-page-link">About</a><a href="/" class="footer-page-link">Contact</a><a
+                                    href="/" class="footer-page-link">Terms
+                                    Of Service</a></div>
+                        </div>
+                        <div id="w-node-f816e8a1-7e1b-c3f5-00b4-910cd771af38-d771af06"
+                            data-w-id="f816e8a1-7e1b-c3f5-00b4-910cd771af38" class="footer-page-list-widget">
+                            <h5 class="footer-widget-title">Developers</h5>
+                            <div class="footer-link-wrap"><a href="/" class="footer-page-link">Github</a><a href="/"
+                                    class="footer-page-link">Documentation</a><a href="/"
+                                    class="footer-page-link">Audits</a><a href="/" class="footer-page-link">Cookies
+                                    Policy</a></div>
+                        </div>
+                        <div id="w-node-f816e8a1-7e1b-c3f5-00b4-910cd771af62-d771af06"
+                            data-w-id="f816e8a1-7e1b-c3f5-00b4-910cd771af62" class="footer-address-widget">
+                            <div class="div-block-41"><img src="/picture/logo.jpg" loading="lazy" width="40"
+                                    alt="" class="image-11" />
+                                <div class="text-block-35">龙年说龙</div>
+                            </div>
+                            <div id="w-node-f816e8a1-7e1b-c3f5-00b4-910cd771af10-d771af06"
+                                data-w-id="f816e8a1-7e1b-c3f5-00b4-910cd771af10" class="footer-social-wrap">
+                                <div class="footer-social-block"> <a href="https://t.me/lnsl121"
+                                        class="footer-social-link-block w-inline-block"><img
+                                            src="/picture/6453cd66a58028869dca4e5f_socialicon (5).svg"
+                                            loading="lazy" width="40" height="40" alt="Footer Social Icon"
+                                            class="image-10" /></a></div>
+                                <div data-hover="false" data-delay="0" class="dropdown w-dropdown">
+                                    <div class="dropdown-toggle-2 w-dropdown-toggle"><img
+                                            src="/picture/6457b66b26c0b935e8df49a5_languageicon.svg"
+                                            loading="lazy" width="20" alt="" class="image-25" /></div>
+                                    <nav class="dropdown-list-2 w-dropdown-list"><a href="#"
+                                            class="dropdown-link-2 w-dropdown-link">EN</a><a href="#"
+                                            class="dropdown-link-2 w-dropdown-link">CN</a></nav>
+                                </div>
+                            </div>
+                            <div class="copyright-wrap">
+                                <p data-w-id="f816e8a1-7e1b-c3f5-00b4-910cd771af75" class="copyright-content">版权所有 ©
+                                    龙年说龙 | 版权所有<a href="/" target="_blank" class="footer-enquiry-link"></a><a href="/"
+                                        target="_blank" class="footer-enquiry-link"></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="/js/webflow.38630d4ab.js" type="text/javascript"></script>
+</body>
+
+</html>
