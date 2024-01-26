@@ -1,0 +1,68 @@
+#此工作流程使用未经GitHub认证的操作。
+#它们由第三方提供并受
+#单独的服务条款、隐私政策和支持
+#文档。
+
+#此工作流程帮助您触发代码的SonarCloud分析并填充
+#发现漏洞的GitHub代码扫描警报。
+#开源项目免费。
+
+# 1.使用您的GitHub帐户登录SonarCloud.io
+
+# 2.在SonarCloud上导入您的项目
+# *首先添加您的GitHub组织，然后将您的存储库添加为新项目。
+# *请注意，许多语言都有资格进行自动分析，
+#这意味着分析将自动开始，无需设置GitHub操作。
+# *此行为可在管理》分析方法中更改。
+#
+# 3.遵循SonarCloud产品内教程
+# * a .将项目关键字和组织关键字复制/粘贴到下面的args参数中
+#（您可以在SonarCloud中找到这些信息。点击左下方的“信息”）
+#
+# * b .生成一个新令牌，并使用名称SONAR_TOKEN将其添加到Github存储库的秘密中
+#（在SonarCloud上，点击您右上角的头像》我的帐户》安全
+#或者直接去https://sonarcloud.io/account/security/）
+
+#请随意查看我们的文档（https://docs.sonarcloud.io/getting-started/github/）
+#如果您需要帮助，请访问我们的社区论坛（https://community.sonarsource.com/c/help/sc/9）
+
+名字: 名称:声纳云分析
+
+在:
+推:
+分支: [分支:【“主“】"主要" ]
+拉取请求:
+分支: [分支:【“主“】"主要" ]
+工作流_调度:
+
+许可:
+拉取请求: 拉取请求:read #允许声纳云用分析结果修饰PRs#允许SonarCloud用分析结果修饰PRs
+
+工作:
+分析:
+连续运行: 运行:Ubuntu-最新版
+
+步伐:
+      - 名字: -名称:使用SonarCloud进行分析
+
+#您可以锁定确切的提交或版本您可以锁定确切的提交或版本。
+#用途:sonar source/sonar cloud-github-action @ de 2e 56 b 42 aa 84d 0 B1 C5 b 622644 AC 17 e 505 c 9 a 049 #用途:sonar source/sonar cloud-github-action @ de 2e 56 b 42 a 84d 0 B1 C5 b 622644 AC 17 e 505 c 9 a 049
+使用: 用途:sonar source/sonar cloud-github-action @ de 2e 56 b 42 aa 84d 0 B1 C5 b 622644 AC 17 e 505 C9 a 049
+包封/包围（动词envelop的简写）:
+GITHUB_TOKEN: GITHUB_TOKEN: ${{ secrets。GITHUB_TOKEN }} #需要获取公关信息{{秘密。GITHUB_TOKEN }} #需要获取公关信息
+声纳_令牌: SONAR_TOKEN: ${{机密。SONAR_TOKEN }} #在Sonarcloud.io上生成一个令牌,将其添加到名为声纳_令牌的报告的机密中（设置》机密》操作》添加新的存储库机密）{{秘密。SONAR_TOKEN }} #在Sonarcloud.io上生成一个令牌，将其添加到名为SONAR_TOKEN的报告的机密中（设置》机密》操作》添加新的存储库机密）
+随着:
+sonarcloud扫描仪的其他参数# Additional arguments for the sonarcloud scanner
+一个参数名:
+#您的项目和组织的唯一键。您可以在声纳云》信息（左下角菜单)中找到它们#您的项目和组织的唯一键。您可以在SonarCloud》信息（左下角菜单）中找到它们
+#强制#强制
+-Dsonar.projectKey=
+-Dsonar.organization=
+#包含主源文件的目录的逗号分隔路径包含主源文件的目录的逗号分隔路径。
+#-Dsonar.sources= #可选,默认为项目基本目录#-Dsonar.sources= #可选，默认为项目基本目录
+#当您需要在启动目录以外的目录中进行分析时#当您需要在启动目录以外的目录中进行分析时
+#-Dsonar.projectBaseDir= #可选,默认值为。Dsonar.projectBaseDir = #可选，默认为。
+#包含测试源文件的目录的逗号分隔路径包含测试源文件的目录的逗号分隔路径。
+#-Dsonar.tests= #可选。有关代码覆盖率的更多信息,请参考https://docs。声纳云。io/enriching/test-Coverage/overview/#-dsonar . tests = #可选。有关代码覆盖率的更多信息，请参考https://docs . sonar cloud . io/enriching/test-Coverage/overview/
+#为客户端和服务器端分析日志添加更多详细信息,激活扫描器的调试模式,并将客户端环境变量和系统属性添加到分析报告处理的服务器端日志中3 . 3 . 4 #为客户端和服务器端分析日志添加了更多详细信息，激活了扫描器的调试模式，并将客户端环境变量和系统属性添加到分析报告处理的服务器端日志中。
+#-Dsonar.verbose= #可选，默认值为false
